@@ -8,9 +8,9 @@
         $database = 'me_invoice_generator';
     } else {
         // Server environment details
-        $username = 'root';
-        $pass = '';
-        $database = 'me_invoice_generator';
+        $username = 'cnpthbbs_invoice_user1';
+        $pass = '%tNc6peV4-}w';
+        $database = 'cnpthbbs_invoice1';
     }
 
     $conn = mysqli_connect($server,$username,$pass,$database);
