@@ -78,7 +78,7 @@ table thead td { background-color: #EEEEEE;
     <table width="100%" height="50%">
         <tr>
             <td style="text-align: center;">
-                <img src="img/logo.png" alt="" class="" height="12%" width="25%">
+                <img src="img/me_log.jpg" alt="" class="" height="10%" width="50%">
             </td>
         </tr>
     </table>
@@ -242,7 +242,7 @@ $mpdf = new \Mpdf\Mpdf([
 	'margin_right' => 15,
 	'margin_top' => 35,
 	'margin_bottom' => 25,
-	'margin_header' => 5,
+	'margin_header' => 12,
 	'margin_footer' => 10
 ]);
 

@@ -216,9 +216,9 @@ $invoiceNumber = getInvoiceId();
             <section class="col-lg-2">
                 <nav id="sidebarMenu" class="  collapse d-lg-block sidebar collapse bg-white">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#" id="change_password"><img src="img/Bhavi-Logo-2.png" alt="" height="80px" width="200px"></a>
+                        <a class="navbar-brand" href="#" id="change_password"><img src="img/me_log.jpg" alt="" height="70px" width="200px"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon" style="display: none;"></span>
                         </button>
                         <div class=" navbar-collapse  " id="navbarNav">
                             <ul class="navbar-nav " style="margin-left: 10%; text-align: center;">
@@ -385,7 +385,7 @@ $invoiceNumber = getInvoiceId();
                     <!-- FORM -->
 
                     <form class=" p-4 pb-4 mb-5" action="quotationform.php" method="post">
-                        <img src="img/Bhavi-Logo-2.png" alt="" class="mx-auto d-block img-fluid" style="max-height: 20%; max-width: 20%;">
+                        <img src="img/me_log.jpg" alt="" class="mx-auto d-block img-fluid" style="max-height: 30%; max-width: 30%;">
 
 
                         <!-- FORM INVOICENUMBER -->
@@ -973,7 +973,7 @@ $invoiceNumber = getInvoiceId();
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <span class="verticalline mb-5 d-block d-lg-none"></span>
-                                        <h5 class="mb-3"><strong>Scan to Pay:</strong></h5>
+                                        <h5 class="mb-3"><strong></strong></h5>
                                         <!-- <h4><img src="img/qrcode.jpg" alt="" class="img-fluid" width="20%" height="20%"></h4> -->
                                     </div>
                                     <<div class="col-lg-6 col-md-12 invoicenumber">

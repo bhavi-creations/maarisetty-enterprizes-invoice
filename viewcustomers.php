@@ -35,7 +35,7 @@ if ($result && $result2) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BHAVIINVOICE</title>
+  <title>M E INVOICE</title>
 
   <!-- BOOTSTRAP PLUGIN -->
 
@@ -157,7 +157,7 @@ if ($result && $result2) {
       <section class="col-lg-2">
         <nav id="sidebarMenu" class="  collapse d-lg-block sidebar collapse bg-white">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#" id="change_password"><img src="img/Bhavi-Logo-2.png" alt="" height="80px" width="200px"></a>
+            <a class="navbar-brand" href="#" id="change_password"><img src="img/me_log.jpg" alt="" height="60px" width="200px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -276,7 +276,7 @@ if ($result && $result2) {
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/Bhavi-Logo-2.png" alt="" height="80px" width="200px" class="img-fluid"></a>
+            <a class="navbar-brand" href="#"><img src="img/me_log.jpg" alt="" height="60px" width="200px" class="img-fluid"></a>
             <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>

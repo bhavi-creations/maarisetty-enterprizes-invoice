@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHAVIINVOICE</title>
+    <title>M E INVOICE</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -202,9 +202,9 @@ if ($result->num_rows > 0) {
             <section class="col-lg-2">
                 <nav id="sidebarMenu" class="  collapse d-lg-block sidebar collapse bg-white">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#" id="change_password"><img src="img/Bhavi-Logo-2.png" alt="" height="80px" width="200px"></a>
+                        <a class="navbar-brand" href="#" id="change_password"><img src="img/me_log.jpg" alt="" height="60px" width="200px"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <!-- <span class="navbar-toggler-icon"></span> -->
                         </button>
                         <div class=" navbar-collapse  " id="navbarNav">
                             <ul class="navbar-nav " style="margin-left: 10%; text-align: center;">
@@ -370,7 +370,7 @@ if ($result->num_rows > 0) {
                     <!-- FORM -->
 
                     <form class="  p-4 pb-4 mb-5" action="editform.php" method="post">
-                        <img src="img/Bhavi-Logo-2.png" alt="" class="mx-auto d-block" height="20%" width="20%">
+                        <img src="img/me_log.jpg" alt="" class="mx-auto d-block" height="30%" width="30%">
 
                         <!-- FORM INVOICENUMBER -->
 

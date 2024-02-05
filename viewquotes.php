@@ -39,7 +39,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHAVIINVOICE</title>
+    <title>M EINVOICE</title>
 
     <!-- BOOTSTRAP PLUGIN -->
 
@@ -63,60 +63,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="img/stylemi.css">
 
 
-    <!-- <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 182px;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            z-index: 3;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12 px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .navbar-nav li:hover .dropdown-content {
-            display: block;
-        }
-
-        
-        .sidebar {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            padding: 58px 0 0;
-            /* Height of navbar */
-            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-            width: 240px;
-            z-index: 600;
-        }
-
-        .nav-links {
-            background-color: aliceblue;
-            border-radius: 20px;
-        }
-
-        .active-link {
-            background-color: blue;
-            color: white;
-        }
-    </style> -->
     <style>
         .table.viewinvoicetable thead {
             position: sticky;
@@ -173,9 +120,9 @@ $result = $conn->query($sql);
             <section class="col-lg-2">
                 <nav id="sidebarMenu" class="  collapse d-lg-block sidebar collapse bg-white">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#" id="change_password"><img src="img/Bhavi-Logo-2.png" alt="" height="80px" width="200px"></a>
+                        <a class="navbar-brand" href="#" id="change_password"><img src="img/me_log.jpg" alt="" height="70px" width="200px"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon" style="display: none;"></span>
                         </button>
                         <div class=" navbar-collapse  " id="navbarNav">
                             <ul class="navbar-nav " style="margin-left: 10%; text-align: center;">

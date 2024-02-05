@@ -10,7 +10,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="password_form.php" method="post">
-                                <div class="container-fluid" > <img src="img/Bhavi-Logo-2.png" alt="" height="80px" width="200px">
+                                <div class="container-fluid" > <img src="img/me_log.jpg" alt="" height="80px" width="300px">
                                 </div>
                                 <div class="form-group mt-3">
                                    

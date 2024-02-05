@@ -33,8 +33,8 @@
             <div class="card">
               <div class="card-body p-5">
                 <form class="mb-3 mt-md-4" method="post" action="loginform.php">
-                  <h2 class=" mb-2 text-uppercase "><strong>Bhavi </strong>Invoice</h2>
-                  <p class=" mb-5">we're Here to Help You Shine</p>
+                  <h2 class=" mb-2 text-uppercase "><strong>Maarisetty Enterprizes </strong></h2>
+                  <p class=" mb-5">Invoice</p>
                   <div class="mb-3">
                     <label for="email" class="form-label "><b> Username</b></label>
                     <input type="text" class="form-control form-input" id="email" placeholder="username" name="email">
