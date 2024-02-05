@@ -13,58 +13,6 @@ if (!isset($_SESSION['email'])) {
 
 require_once('bhavidb.php');
 
-function getInvoiceId()
-{
-    $server = 'localhost';
-    // Condition to check if the script is running locally or on a server
-    if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1') {
-        // Local environment details
-        $username = 'root';
-        $pass = '';
-        $database = 'me_invoice_generator';
-    } else {
-        // Server environment details
-        $username = '';
-        $pass = '';
-        $database = '';
-    }
-
-    $conn = mysqli_connect($server, $username, $pass, $database);
-
-    if ($conn->connect_error) {
-        die('Error : (' . $conn->connect_errno . ') ' . $conn->connect_error);
-    }
-
-    $query = "SELECT Invoice_no FROM invoice ORDER BY Invoice_no DESC LIMIT 1";
-
-    if ($result = $conn->query($query)) {
-        $row_cnt = $result->num_rows;
-
-        $row = mysqli_fetch_assoc($result);
-
-        if ($row_cnt == 0) {
-            $nextInvoiceNumber = INVOICE_INITIAL_VALUE;
-        } else {
-            $nextInvoiceNumber = $row['Invoice_no'] + 1;
-        }
-
-
-        $formattedInvoiceNumber = sprintf('%04d', $nextInvoiceNumber);
-
-
-        $result->free();
-
-
-        $conn->close();
-
-        return $formattedInvoiceNumber;
-    }
-}
-
-$invoiceNumber = getInvoiceId();
-
-/* Customer Details */
-
 
 
 ?>

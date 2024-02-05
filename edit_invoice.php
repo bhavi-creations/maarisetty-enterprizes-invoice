@@ -7,35 +7,6 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-
-define('INVOICE_INITIAL_VALUE', '1');
-
-
-require_once('bhavidb.php');
-
-function getInvoiceId()
-{
-    $server = 'localhost';
-    // Condition to check if the script is running locally or on a server
-    if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1') {
-        // Local environment details
-        $username = 'root';
-        $pass = '';
-        $database = 'me_invoice_generator';
-    } else {
-        // Server environment details
-        $username = '';
-        $pass = '';
-        $database = '';
-    }
-
-    $conn = mysqli_connect($server, $username, $pass, $database);
-
-    if ($conn->connect_error) {
-        die('Error : (' . $conn->connect_errno . ') ' . $conn->connect_error);
-    }
-}
-
 require_once('bhavidb.php');
 
 $invoice_id = (isset($_GET['Sid']) ? $_GET['Sid'] : '');

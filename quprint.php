@@ -1,7 +1,4 @@
 <?php
-
-
-require_once('bhavidb.php');
 require('bhavidb.php');
 $Sid = (isset($_GET['Sid']) && $_GET['Sid'] !== '') ? $_GET['Sid'] : 0;
 $sql = "SELECT * FROM `quotation` 
