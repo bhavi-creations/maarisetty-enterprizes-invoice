@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 window.alert('Password Updates Successfully');
                 window.location.href='index.php';
                  </script>";
+                 session_destroy();
             } else {
                 echo "Error updating password.";
             }
