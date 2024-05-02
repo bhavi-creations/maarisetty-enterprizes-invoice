@@ -484,9 +484,9 @@ $invoiceNumber = getInvoiceId();
                                                 <th class="text-center d-none d-md-table-cell d-lg-table-cell">Description</th>
                                                 <th class="text-center d-none d-md-table-cell d-lg-table-cell">HSN</th>
                                                 <th class="text-center d-none d-md-table-cell d-lg-table-cell">UOM</th>
-                                                <th class="text-center">Qty</th>
-                                                <th class="text-center">Price/Unit</th>
-                                                <th class="text-center">Amount</th>
+                                                <th class="text-center">Qty<span style="color: red;">*</span></th>
+                                                <th class="text-center">Price/Unit<span style="color: red;">*</span></th>
+                                                <th class="text-center">Amount<span style="color: red;">*</span></th>
                                                 <th class="text-center">Rate of Tax</th>
                                                 <th class="text-center">Taxable value</th>
                                                 <th class="text-center">Total value</th>

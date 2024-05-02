@@ -206,7 +206,7 @@ $invoiceNumber = getInvoiceId();
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#" id="change_password"><img src="img/me_log.jpg" alt="" height="60px" width="200px"></a>
                         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> -->
-                            <!-- <span class="navbar-toggler-icon" style="display: none;"></span> -->
+                        <!-- <span class="navbar-toggler-icon" style="display: none;"></span> -->
                         </button>
                         <div class=" navbar-collapse  " id="navbarNav">
                             <ul class="navbar-nav " style="margin-left: 10%; text-align: center;">
@@ -381,7 +381,7 @@ $invoiceNumber = getInvoiceId();
                         <div class="row container pt-5 ps-5 mb-5">
                             <div class="col-lg-8 col-sm-12 col-md-12">
                                 <h5><strong>Quotation</strong></h5>
-                                <h5><strong>Date :</strong> <input type="date" name="quotation_date" id="" class="form-input"></h5>
+                                <h5><strong>Date :</strong> <input type="date" name="quotation_date"  class="form-input" value="<?php echo date('Y-m-d'); ?>"></h5>
                             </div>
                             <div class="col-lg-4 col-sm-12 col-md-12 invoicenumber">
                                 <h5><strong>Quotation Number </strong></h5>
@@ -414,7 +414,8 @@ $invoiceNumber = getInvoiceId();
                                 </div>
                                 <div class="col-lg-4 col-sm-12 mb-3">
                                     <h4 class="mb-3">
-                                        <select class="" name="company" id="companySelect">
+                                        <label for="" class="">To<span style="color: red;">*</span></label>
+                                        <select class="" name="company" id="companySelect" required><span style="color: red;">*</span>
                                             <?php
                                             $sql = "SELECT * FROM `customer`";
                                             $res = $conn->query($sql);
@@ -437,9 +438,9 @@ $invoiceNumber = getInvoiceId();
                                 </div>
                             </div>
                         </div>
-                     
-                                <h3 class="text-center mb-5"><B>Price Quotation</B></h3>
-                             
+
+                        <h3 class="text-center mb-5"><B>Price Quotation</B></h3>
+
                         <div class="container-fluid billing">
                             <div class="table-responsive">
                                 <div style="overflow-x:auto;">
@@ -452,9 +453,9 @@ $invoiceNumber = getInvoiceId();
                                                 <th style="width: px;" class="text-center d-none d-md-table-cell d-lg-table-cell">Description</th>
                                                 <th style="width: px;" class="text-center d-none d-md-table-cell d-lg-table-cell">HSN</th>
                                                 <th style="width: px;" class="text-center d-none d-md-table-cell d-lg-table-cell">UOM</th>
-                                                <th class="text-center">Qty</th>
-                                                <th class="text-center">Price/Unit</th>
-                                                <th class="text-center">Amount</th>
+                                                <th class="text-center">Qty <span style="color: red;">*</span></th>
+                                                <th class="text-center">Price/Unit<span style="color: red;">*</span></th>
+                                                <th class="text-center">Amount<span style="color: red;">*</span></th>
                                                 <th class="text-center">Rate of Tax</th>
                                                 <th class="text-center">Taxable value</th>
                                                 <th class="text-center">Total value</th>
@@ -493,7 +494,7 @@ $invoiceNumber = getInvoiceId();
                                                         ?>
                                                     </select></td>
                                                 <td><input type='text' name='qty_gst_total[]' id='qty_gst_total' class='form-control qty_gst_total' readonly></td>
-                                                <td><input type='text' name='total_value[]' id='total_value' class='form-control total_value' required readonly></td>
+                                                <td><input type='text' name='total_value[]' id='total_value' class='form-control total_value'  readonly></td>
                                                 <td></td>
                                             </tr>
 
@@ -502,7 +503,7 @@ $invoiceNumber = getInvoiceId();
                                         <tfoot>
                                             <tr>
                                                 <td colspan='7' class="text-right " style="text-align: right;">Total</td>
-                                                <td colspan="1"><input type='text' name='total_amount' id='total_amount' class='form-control total_amount' required readonly></td>
+                                                <td colspan="1"><input type='text' name='total_amount' id='total_amount' class='form-control total_amount'  readonly></td>
                                                 <td colspan="1"></td>
                                                 <td colspan="1"><input type='text' name='total_taxable_value' id='total_taxable_value' class='form-control total_taxable_value' readonly></td>
                                                 <td colspan="2"><input type='text' name='grand_total_value' id='grand_total_value' class='form-control grand_total_value' readonly></td>
@@ -617,19 +618,19 @@ $invoiceNumber = getInvoiceId();
 
                                     $("#btn-add-row").click(function() {
                                         var row = "<tr><td></td> <td class='serial-number'></td><td><textarea class='form-control' name='description[]' placeholder='DESCRIPITION' style='width: 100%;'></textarea></td><td><input name='hsn[]' type='text' class='form-control'></td><td> <select name='uom[]' class='form-control'><?php $sql = "SELECT `service_name` FROM `service_names`";
-                                                                                                                                                                                                                                                                                                                            $res = $conn->query($sql);
+                                                                                                                                                                                                                                                                                                                                        $res = $conn->query($sql);
 
-                                                                                                                                                                                                                                                                                                                            while ($row = mysqli_fetch_assoc($res)) {
-                                                                                                                                                                                                                                                                                                                                echo "<option  value='" . $row['service_name'] . "'>" . $row['service_name'] . "</option>";
-                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                            ?></select></td><td><input type='text' required name='qty[]' class='form-control qty'></td><td><input type='text' required name='price[]' class='form-control price'></td><td><input type='text' required name='amount[]' id='subtotal' class='form-control subtotal' readonly></td><td> <select name='qty_gst[]' id='gst' class='form-control qty_gst'><?php
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                require_once('bhavidb.php');
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                $sql2 = "SELECT `gst` FROM `gst_no`";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                $result = $conn->query($sql2);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                while ($row = mysqli_fetch_assoc($result)) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    echo "<option value='" . $row['gst'] . "'>" . $row['gst'] . "</option>";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ?></select></td><td><input type='text' name='qty_gst_total[]' id='qty_gst_total' class='form-control qty_gst_total' required readonly></td><td><input type='text' name='total_value[]' id='total_value' class='form-control total_value' required readonly></td><td><button type='button' value='X' style='border: none; background: none;' class='btn-sm' id='btn-row-remove'><b>X</b></button></td></tr>";
+                                                                                                                                                                                                                                                                                                                                        while ($row = mysqli_fetch_assoc($res)) {
+                                                                                                                                                                                                                                                                                                                                            echo "<option  value='" . $row['service_name'] . "'>" . $row['service_name'] . "</option>";
+                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                        ?></select></td><td><input type='text' required name='qty[]' class='form-control qty'></td><td><input type='text' required name='price[]' class='form-control price'></td><td><input type='text' required name='amount[]' id='subtotal' class='form-control subtotal' readonly></td><td> <select name='qty_gst[]' id='gst' class='form-control qty_gst'><?php
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    require_once('bhavidb.php');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    $sql2 = "SELECT `gst` FROM `gst_no`";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    $result = $conn->query($sql2);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    while ($row = mysqli_fetch_assoc($result)) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        echo "<option value='" . $row['gst'] . "'>" . $row['gst'] . "</option>";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?></select></td><td><input type='text' name='qty_gst_total[]' id='qty_gst_total' class='form-control qty_gst_total'  readonly></td><td><input type='text' name='total_value[]' id='total_value' class='form-control total_value' readonly></td><td><button type='button' value='X' style='border: none; background: none;' class='btn-sm' id='btn-row-remove'><b>X</b></button></td></tr>";
 
                                         $("#product_tbody").append(row);
 
@@ -971,24 +972,24 @@ $invoiceNumber = getInvoiceId();
                                         <h6 class="mb-2">Account Name : </h6>
                                         <h6 class="mb-2">Account No. : 247705500400</h6>
                                         <h6 class="mb-2">IFSC : ICIC0002477</h6>
-                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!--   ENDING  SCANNER SECTION  -->
+                        <!--   ENDING  SCANNER SECTION  -->
 
-                            <!--    GOOGLEPAY SECTION   -->
+                        <!--    GOOGLEPAY SECTION   -->
 
 
-                            <div class="googlepay container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <h6 class="text-center">Google Pay, Phone Pay, Paytm: </h6>
-                                    </div>
+                        <div class="googlepay container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h6 class="text-center">Google Pay, Phone Pay, Paytm: </h6>
                                 </div>
                             </div>
+                        </div>
 
-                            <!--  ENDING  GOOGLEPAY SECTION  -->
+                        <!--  ENDING  GOOGLEPAY SECTION  -->
 
 
 
