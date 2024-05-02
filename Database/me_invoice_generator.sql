@@ -297,7 +297,7 @@ CREATE TABLE `lgtable` (
 
 INSERT INTO `lgtable` (`Id`, `email`, `password`) VALUES
 (1, 'rajkumar16371@gmail.com', '6e46595a57e6d7219340d2c163273ab9'),
-(3, 'bhavicreations', 'e10adc3949ba59abbe56e057f20f883e');
+(3, 'maarisetty', 'e10adc3949ba59abbe56e057f20f883e');
 
 -- --------------------------------------------------------
 
