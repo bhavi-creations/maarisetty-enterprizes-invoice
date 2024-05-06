@@ -445,7 +445,7 @@ if ($result->num_rows > 0) {
                                             <th class="text-center">UOM</th>
                                             <th class="text-center">Qty<span style="color: red;">*</span></th>
                                             <th class="text-center">Price/Unit<span style="color: red;">*</span></th>
-                                            <th class="text-center">Amount<span style="color: red;">*</span></th>
+                                            <th class="text-center">Amount</th>
                                             <th class="text-center">Rate of Tax</th>
                                             <th class="text-center">Taxable value</th>
                                             <th class="text-center">Total value</th>
