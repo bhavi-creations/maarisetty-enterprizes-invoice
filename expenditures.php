@@ -346,7 +346,7 @@ require_once('bhavidb.php');
                         <div class="row container pt-5 ps-5 mb-5">
                             <div class="col-lg-8 col-sm-12 col-md-12">
                                 <h5><strong>Expenditure</strong></h5>
-                                <h5><strong>Date :</strong> <input type="date" name="exp_date" id="" class="form-input" required></h5>
+                                <h5><strong>Date :</strong> <input type="date" name="exp_date" id="" class="form-input" value="<?php echo date('Y-m-d') ?>"></h5>
                             </div>
 
                         </div>

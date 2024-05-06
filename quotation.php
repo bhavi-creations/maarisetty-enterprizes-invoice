@@ -64,7 +64,7 @@ $invoiceNumber = getInvoiceId();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHAVIINVOICE</title>
+    <title>M E Invoice</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -414,7 +414,7 @@ $invoiceNumber = getInvoiceId();
                                 </div>
                                 <div class="col-lg-4 col-sm-12 mb-3">
                                     <h4 class="mb-3">
-                                        <label for="" class="">To<span style="color: red;">*</span></label>
+                                        <!-- <label for="" class="">To<span style="color: red;">*</span></label> -->
                                         <select class="" name="company" id="companySelect" required><span style="color: red;">*</span>
                                             <?php
                                             $sql = "SELECT * FROM `customer`";
@@ -479,9 +479,9 @@ $invoiceNumber = getInvoiceId();
                                                         }
                                                         ?>
                                                     </select></td>
-                                                <td><input type='text' required name='qty[]' class='form-control qty'></td>
-                                                <td><input type='text' required name='price[]' class='form-control price'></td>
-                                                <td><input type='text' required name='amount[]' id="subtotal" class='form-control subtotal' readonly></td>
+                                                <td><input type='number' required name='qty[]' class='form-control qty'></td>
+                                                <td><input type='number' required name='price[]' class='form-control price'></td>
+                                                <td><input type='number' required name='amount[]' id="subtotal" class='form-control subtotal' readonly></td>
                                                 <td> <select name="qty_gst[]" id="gst" class="qty_gst">
                                                         <?php
                                                         require_once('bhavidb.php');
@@ -579,7 +579,7 @@ $invoiceNumber = getInvoiceId();
                                             </tr>
                                             <tr>
                                                 <td colspan="10" class="text-right" class='text-right' style="text-align: right;">Advance</td>
-                                                <td colspan="2"><input type='text' name='advance' id='advance' class='form-control advance'></td>
+                                                <td colspan="2"><input type='number' name='advance' id='advance' class='form-control advance'></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="9"><input name='balancewords' type='text' class="form-control balancewords" readonly id="balancewords"></td>

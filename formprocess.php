@@ -25,21 +25,21 @@ if (isset($_POST["submit"])) {
     $invoice_no = mysqli_real_escape_string($conn, $_POST["invoice_no"]);
     $invoice_date = date("Y-m-d", strtotime($_POST["invoice_date"]));
     $status = mysqli_real_escape_string($conn, $_POST["status"]);
-    $total_amount = mysqli_real_escape_string($conn, $_POST["total_amount"]);
-    $total_taxable_value = mysqli_real_escape_string($conn, $_POST["total_taxable_value"]);
-    $total_value = mysqli_real_escape_string($conn, $_POST["grand_total_value"]);
+    $total_amount = floatval(mysqli_real_escape_string($conn, $_POST["total_amount"]));
+    $total_taxable_value = floatval(mysqli_real_escape_string($conn, $_POST["total_taxable_value"]));
+    $total_value = floatval(mysqli_real_escape_string($conn, $_POST["grand_total_value"]));
     $c_gst = mysqli_real_escape_string($conn, $_POST["cgst"]);
-    $cgst_total = mysqli_real_escape_string($conn, $_POST["cgst_total"]);
+    $cgst_total = floatval(mysqli_real_escape_string($conn, $_POST["cgst_total"]));
     $sgst = mysqli_real_escape_string($conn, $_POST["sgst"]);
-    $sgst_total = mysqli_real_escape_string($conn, $_POST["sgst_total"]);
+    $sgst_total = floatval(mysqli_real_escape_string($conn, $_POST["sgst_total"]));
     $igst = mysqli_real_escape_string($conn, $_POST["igst"]);
-    $igst_total = mysqli_real_escape_string($conn, $_POST["igst_total"]);
-    $total_tax_amount = mysqli_real_escape_string($conn, $_POST["total_tax_amount"]);
-    $total_after_tax = mysqli_real_escape_string($conn, $_POST["total_after_tax"]);
+    $igst_total = floatval(mysqli_real_escape_string($conn, $_POST["igst_total"]));
+    $total_tax_amount = floatval(mysqli_real_escape_string($conn, $_POST["total_tax_amount"]));
+    $total_after_tax = floatval(mysqli_real_escape_string($conn, $_POST["total_after_tax"]));
     $words = mysqli_real_escape_string($conn, $_POST["words"]);
-    $advance = mysqli_real_escape_string($conn, $_POST["advance"]);
+    $advance = floatval(mysqli_real_escape_string($conn, $_POST["advance"]));
     $balancewords = mysqli_real_escape_string($conn, $_POST["balancewords"]);
-    $balance = mysqli_real_escape_string($conn, $_POST["balance"]);
+    $balance = floatval(mysqli_real_escape_string($conn, $_POST["balance"]));
     $terms = mysqli_real_escape_string($conn, $_POST["terms"]);
     $note = mysqli_real_escape_string($conn, $_POST["note"]);
 
@@ -74,7 +74,7 @@ if (isset($_POST["submit"])) {
                 // Add service details to the rows array
                 $rows[] = "('$Sid', '$description', '$hsn', '$uom', '$qty', '$price','$amount', '$rate_of_tax', '$taxable_value' , '$total_value_amount')";
             }
-          
+
 
             $sql2 .= implode(",", $rows);
 
@@ -88,9 +88,7 @@ if (isset($_POST["submit"])) {
             } else {
                 echo "Invoice Added Failed: " . $conn->error;
                 echo "SQL Query: " . $sql;
-               
             }
-            
         } else {
             echo "Invoice Added Failed:" . $conn->error;
             echo "SQL Query: " . $sql;

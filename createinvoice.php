@@ -383,7 +383,7 @@ $invoiceNumber = getInvoiceId();
                         <div class="row container pt-5 ps-5 mb-5">
                             <div class="col-lg-8 col-sm-12 col-md-12">
                                 <h5><strong>Invoice</strong></h5>
-                                <h5><strong>Date :</strong> <input type="date" name="invoice_date" id="" class="form-input"></h5>
+                                <h5><strong>Date :</strong> <input type="date" name="invoice_date" id="" class="form-input" value="<?php echo date('Y-m-d'); ?>"></h5>
                             </div>
                             <div class="col-lg-4 col-sm-12 col-md-12 invoicenumber">
                                 <h5><strong>Invoice Number </strong></h5>
@@ -416,7 +416,7 @@ $invoiceNumber = getInvoiceId();
                                 </div>
                                 <div class="col-lg-4 col-sm-12 mb-3">
                                     <h4 class="mb-3">
-                                        <select class="" name="company" id="companySelect">
+                                        <select class="" name="company" id="companySelect" required>
                                             <?php
                                             $sql = "SELECT * FROM `customer`";
                                             $res = $conn->query($sql);
@@ -486,7 +486,7 @@ $invoiceNumber = getInvoiceId();
                                                 <th class="text-center d-none d-md-table-cell d-lg-table-cell">UOM</th>
                                                 <th class="text-center">Qty<span style="color: red;">*</span></th>
                                                 <th class="text-center">Price/Unit<span style="color: red;">*</span></th>
-                                                <th class="text-center">Amount<span style="color: red;">*</span></th>
+                                                <th class="text-center">Amount</th>
                                                 <th class="text-center">Rate of Tax</th>
                                                 <th class="text-center">Taxable value</th>
                                                 <th class="text-center">Total value</th>
@@ -510,8 +510,8 @@ $invoiceNumber = getInvoiceId();
                                                         }
                                                         ?>
                                                     </select></td>
-                                                <td><input type='text' required name='qty[]' class='form-control qty'></td>
-                                                <td><input type='text' required name='price[]' class='form-control price'></td>
+                                                <td><input type='number' required name='qty[]' class='form-control qty'></td>
+                                                <td><input type='number' required name='price[]' class='form-control price'></td>
                                                 <td><input type='text' required name='amount[]' id="subtotal" class='form-control subtotal' readonly></td>
                                                 <td> <select name="qty_gst[]" id="gst" class="qty_gst">
                                                         <?php
@@ -610,7 +610,7 @@ $invoiceNumber = getInvoiceId();
                                             </tr>
                                             <tr>
                                                 <td colspan="10" class="text-right" class='text-right' style="text-align: right;">Advance</td>
-                                                <td colspan="2"><input type='text' name='advance' id='advance' class='form-control advance'></td>
+                                                <td colspan="2"><input type='number' name='advance' id='advance' class='form-control advance' ></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="9"><input name='balancewords' type='text' class="form-control balancewords" readonly id="balancewords"></td>
